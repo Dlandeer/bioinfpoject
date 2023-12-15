@@ -22,8 +22,6 @@ for i in range (len(A)):
             l[i][j]=l[i-1][j]+gap_penalty
         else:
             l[i][j]=max(l[i-1][j-1]+eq(A[i],B[j])*mismatch_penalty,l[i][j-1]+mismatch_penalty,l[i-1][j]+mismatch_penalty)
-for i in range(len(A)):
-    print(*l[i])
 i=len(A)-1
 j=len(B)-1
 while i>-1 or j>-1:
