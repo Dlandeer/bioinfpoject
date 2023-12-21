@@ -3,8 +3,19 @@ def eq(a,b):
         return 0
     else:
         return 1
-A=input()
-B=input()
+def read_fasta(filename):
+    sequence=str()
+    F=open(filename)
+    for line in F:
+        if line[0]==">":
+            continue
+        else:
+            sequence+=line.strip()
+    return sequence
+a=input()
+b=input()
+A=read_fasta(a)
+B=read_fasta(b)
 Av=str()
 Bv=str()
 l=[]
